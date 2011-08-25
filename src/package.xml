@@ -9,7 +9,7 @@
         <name>ApexComponent</name>
     </types>
     <types>
-        <members>*</members>
+        <members>Setup</members>
         <name>ApexPage</name>
     </types>
     <types>
@@ -17,8 +17,20 @@
         <name>ApexTrigger</name>
     </types>
     <types>
+        <members>Force_com_Toolkit_for_Google_Analytics</members>
+        <name>CustomApplication</name>
+    </types>
+    <types>
         <members>*</members>
         <name>CustomObject</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>unfiled$public</members>
+        <name>Report</name>
     </types>
     <types>
         <members>*</members>
