@@ -1,0 +1,54 @@
+<apex:page controller="CustomSettingsController" sidebar="false">
+    <style>
+        .CustomFont{
+            font-weight:bold;
+        }
+    </style>
+    <apex:form id="headerForm">
+        <apex:sectionHeader title="Site Metrics Settings Information"/>
+        <apex:pageblock >
+        <apex:pageMessages ></apex:pageMessages>
+            <div>         
+                 <table style="margin-left:300px;">
+                        <tr >
+                            <td width="50%" style="padding-top:10px;">
+                                <apex:outputText value="Name :" styleClass="CustomFont"/>
+                            </td>
+                            <td width="50%" style="padding-left:15px;padding-top:10px;">
+                                <apex:inputField required="true" value="{!siteMetricSetting.Name}" id="name" />
+                            </td>
+                        </tr>
+                        <tr >
+                            <td width="50%" style="padding-top:10px;">
+                                <apex:outputText value="Email :" styleClass="CustomFont"/>
+                            </td>
+                            <td width="50%" style="padding-left:15px;padding-top:10px;">
+                                <apex:inputField required="true" value="{!siteMetricSetting.Email__c}" id="email" />
+                            </td>
+                        </tr>
+                        <tr >
+                            <td width="50%" style="padding-top:10px;">
+                                <apex:outputText value="Password :" styleClass="CustomFont"/>
+                            </td>
+                            <td width="50%" style="padding-left:15px;padding-top:10px;">
+                                <apex:inputSecret required="true" value="{!siteMetricSetting.Password__c}" id="password" />
+                            </td>
+                        </tr>
+                        <tr >
+                            <td width="50%" style="padding-top:10px;">
+                                <apex:outputText value="Table id :" styleClass="CustomFont"/>
+                            </td>
+                            <td width="50%" style="padding-left:15px;padding-top:10px;">
+                                <apex:inputField required="true" value="{!siteMetricSetting.Table_Id__c}" id="tableId" />
+                            </td>
+                        </tr>
+                    </table>
+                    
+                 </div>
+            
+                     <apex:commandButton value="Save" action="{!save}" style="margin-left:533px;margin-top:15px;"/>
+            
+         </apex:pageblock>
+    </apex:form>
+      
+</apex:page>
