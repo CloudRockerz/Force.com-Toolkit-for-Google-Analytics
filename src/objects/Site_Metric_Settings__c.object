@@ -16,6 +16,32 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>IsFirstTime__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <label>IsFirstTime</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>JobId__c</fullName>
+        <externalId>false</externalId>
+        <label>JobId</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Metric__c</fullName>
+        <description>This would contains the selected metrics ; separated. On the UI , this would be display as multi picklist</description>
+        <externalId>false</externalId>
+        <label>Metric</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Password__c</fullName>
         <description>Password for Google Analytics account</description>
         <externalId>false</externalId>
