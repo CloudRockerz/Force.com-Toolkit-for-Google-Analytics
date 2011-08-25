@@ -22,7 +22,7 @@ public with sharing class ImportGoogleAnalytics {
 		if(initialize(siteMetricSettingsName)) {	
 			
 			Site_Metric_Date__c metricDate = new Site_Metric_Date__c(Name = '2011 Q1', Start_Date__c = Date.newInstance(2011,1,1), 
-				End_Date__c = Date.newInstance(2011,3,31));
+				End_Date__c = Date.newInstance(2011,8,30));
 				
 			GoogleAnalytics.Entry entry = ga.getEntry(metricDate, new list<String>{GoogleAnalytics.VisitorsMetric});
 			
@@ -39,7 +39,7 @@ public with sharing class ImportGoogleAnalytics {
 	public static void importDailyMetrics(string siteMetricSettingsName) {
 		if(initialize(siteMetricSettingsName)) {		
 			Date startDate = Date.newInstance(2011, 2, 1);
-			Date endDate = Date.newInstance(2011, 2, 28);
+			Date endDate = Date.newInstance(2011, 8, 28);
 		
 			ga.insertDailyMetrics(startDate, endDate, new list<String>{GoogleAnalytics.VisitorsMetric});
 		}
@@ -48,7 +48,7 @@ public with sharing class ImportGoogleAnalytics {
 	public static void importEvents(string siteMetricSettingsName) {
 		if(initialize(siteMetricSettingsName)) {		
 			Date startDate = Date.newInstance(2011, 2, 1);
-			Date endDate = Date.newInstance(2011, 2, 2);
+			Date endDate = Date.newInstance(2011, 8, 28);
 			List<String> metrics = new List<String>{GoogleAnalytics.TotalEventsMetric};			
 			List<String> dimensions = new List<String>{GoogleAnalytics.DateDimension, GoogleAnalytics.EventCategoryDimension, 
 				GoogleAnalytics.EventActionDimension, GoogleAnalytics.EventLabelDimension};
@@ -72,10 +72,13 @@ public with sharing class ImportGoogleAnalytics {
 	}
 	
 	static boolean initialize(string siteMetricSettingsName) {
-		Site_Metric_Settings__c settings;
+		List<Site_Metric_Settings__c> settingsList=new List<Site_Metric_Settings__c>();
+		 Site_Metric_Settings__c settings;
 		
 		try {
-			settings = [Select s.Table_Id__c, s.Password__c, s.Email__c From Site_Metric_Settings__c s where s.Name = :siteMetricSettingsName];
+			settingsList = [Select s.Table_Id__c, s.Password__c, s.Email__c From Site_Metric_Settings__c s where s.Name = :siteMetricSettingsName];
+			if(settingsList !=null && settingsList.size()>0)
+				settings=settingsList.get(0);
 		} catch (QueryException ex) {
 			System.debug(Logginglevel.WARN, 'No Site Metric Settings with Name = ' + siteMetricSettingsName + '; stopping import');
 			return false;
