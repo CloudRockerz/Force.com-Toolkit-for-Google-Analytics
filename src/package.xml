@@ -1,40 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Force%2Ecom Toolkit for Google Analytics</fullName>
+    <description>First version of Force.com Toolkit for Google Analytics</description>
     <types>
-        <members>*</members>
+        <members>CustomSettingsController</members>
+        <members>CustomSettingsControllerTest</members>
+        <members>GoogleAnalytics</members>
+        <members>GoogleAnalyticsTest</members>
+        <members>ImportGoogleAnalytics</members>
+        <members>ImportGoogleAnalytics_Test</members>
+        <members>InitializeUpdate</members>
+        <members>ScheduleAnalyticsUpdate</members>
+        <members>SiteMetricTime_Test</members>
         <name>ApexClass</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>ApexComponent</name>
     </types>
     <types>
         <members>Setup</members>
         <name>ApexPage</name>
     </types>
     <types>
-        <members>*</members>
+        <members>SiteMetric_Time</members>
         <name>ApexTrigger</name>
     </types>
     <types>
-        <members>Force_com_Toolkit_for_Google_Analytics</members>
+        <members>Maven_s_Toolkit</members>
         <name>CustomApplication</name>
     </types>
     <types>
-        <members>*</members>
+        <members>Site_Event__c.Action__c</members>
+        <members>Site_Event__c.Category__c</members>
+        <members>Site_Event__c.Count__c</members>
+        <members>Site_Event__c.Date__c</members>
+        <members>Site_Event__c.Media_Code__c</members>
+        <members>Site_Event__c.User__c</members>
+        <members>Site_Metric_Date__c.End_Date__c</members>
+        <members>Site_Metric_Date__c.Start_Date__c</members>
+        <members>Site_Metric_Settings__c.Email__c</members>
+        <members>Site_Metric_Settings__c.IsFirstTime__c</members>
+        <members>Site_Metric_Settings__c.JobId__c</members>
+        <members>Site_Metric_Settings__c.Metric__c</members>
+        <members>Site_Metric_Settings__c.Password__c</members>
+        <members>Site_Metric_Settings__c.Table_Id__c</members>
+        <members>Site_Metric__c.Display_Value__c</members>
+        <members>Site_Metric__c.Metric__c</members>
+        <members>Site_Metric__c.Site_Metric_Date__c</members>
+        <members>Site_Metric__c.Time__c</members>
+        <members>Site_Metric__c.Value__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>Site_Event__c</members>
+        <members>Site_Metric_Date__c</members>
+        <members>Site_Metric_Settings__c</members>
+        <members>Site_Metric__c</members>
         <name>CustomObject</name>
     </types>
     <types>
-        <members>*</members>
+        <members>Setup</members>
+        <members>Site_Event__c</members>
+        <members>Site_Metric_Date__c</members>
+        <members>Site_Metric__c</members>
         <name>CustomTab</name>
     </types>
     <types>
-        <members>unfiled$public</members>
+        <members>Google_Analytics</members>
+        <members>Google_Analytics/GA_Analytics</members>
+        <name>Dashboard</name>
+    </types>
+    <types>
+        <members>Site_Event__c-Site Event Layout</members>
+        <members>Site_Metric_Date__c-Site Metric Date Layout</members>
+        <members>Site_Metric__c-Site Metric Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>Site_Event__c.All</members>
+        <members>Site_Event__c.All1</members>
+        <members>Site_Metric_Date__c.All</members>
+        <members>Site_Metric__c.All</members>
+        <members>Site_Metric__c.All1</members>
+        <name>ListView</name>
+    </types>
+    <types>
+        <members>Google</members>
+        <name>RemoteSiteSetting</name>
+    </types>
+    <types>
+        <members>Google_Analytics_Reports</members>
+        <members>Google_Analytics_Reports/Average_Time_on_Site</members>
+        <members>Google_Analytics_Reports/Bounce_Rate</members>
+        <members>Google_Analytics_Reports/Page_Views_per_Visit</members>
+        <members>Google_Analytics_Reports/Percent_New_Visits</members>
+        <members>Google_Analytics_Reports/Visitor_Report</members>
         <name>Report</name>
     </types>
     <types>
-        <members>*</members>
-        <name>StaticResource</name>
+        <members>Site_Event_Report</members>
+        <members>Site_Metrics_Dates_Report</members>
+        <name>ReportType</name>
+    </types>
+    <types>
+        <members>Site_Metric_Date__c.End_Date_After_Start_Date</members>
+        <members>Site_Metric__c.Time_Format</members>
+        <name>ValidationRule</name>
     </types>
     <version>20.0</version>
 </Package>
